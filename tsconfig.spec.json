@@ -1,0 +1,10 @@
+{
+    "extends": "@sklv-labs/ts-dev-configs/presets/nestjs/tsconfig.spec.json",
+    "compilerOptions": {
+        "rootDir": "./src"
+    },
+    "include": [
+        "src/**/*.spec.ts",
+        "src/**/*.test.ts"
+    ]
+}

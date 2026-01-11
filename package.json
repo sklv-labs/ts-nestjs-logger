@@ -1,0 +1,102 @@
+{
+    "name": "@sklv-labs/ts-nestjs-logger",
+    "version": "0.1.0",
+    "description": "NestJS structured logging with Pino and CLS integration",
+    "author": "sklv-labs",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sklv-labs/ts-nestjs-logger.git"
+    },
+    "keywords": [
+        "nestjs",
+        "logger",
+        "logging",
+        "pino",
+        "structured-logging",
+        "cls",
+        "opentelemetry",
+        "typescript",
+        "sklv-labs"
+    ],
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "CHANGELOG.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "lint": "eslint \"src/**/*.ts\"",
+        "lint:fix": "eslint \"src/**/*.ts\" --fix",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:cov": "jest --coverage",
+        "type-check": "tsc --noEmit",
+        "prepublishOnly": "npm run type-check && npm run build",
+        "version:patch": "npm version patch && git push --follow-tags",
+        "version:minor": "npm version minor && git push --follow-tags",
+        "version:major": "npm version major && git push --follow-tags"
+    },
+    "peerDependencies": {
+        "@nestjs/common": "^11.1.11",
+        "@nestjs/core": "^11.1.11",
+        "@nestjs/microservices": "^11.1.11",
+        "@nestjs/websockets": "^11.1.11",
+        "@sklv-labs/ts-nestjs-cls": "^0.1.0",
+        "@sklv-labs/ts-nestjs-error": "^0.1.0",
+        "@opentelemetry/api": "^1.0.0",
+        "nestjs-cls": "^6.1.0",
+        "reflect-metadata": "^0.2.2",
+        "rxjs": "^7.8.2"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^20.3.1",
+        "@commitlint/config-conventional": "^20.3.1",
+        "@darraghor/eslint-plugin-nestjs-typed": "^7.1.13",
+        "@nestjs/common": "^11.1.11",
+        "@nestjs/core": "^11.1.11",
+        "@nestjs/microservices": "^11.1.11",
+        "@nestjs/platform-express": "^11.1.11",
+        "@nestjs/testing": "^11.1.11",
+        "@nestjs/websockets": "^11.1.11",
+        "@opentelemetry/api": "^1.9.0",
+        "@sklv-labs/ts-dev-configs": "0.1.6",
+        "@sklv-labs/ts-nestjs-cls": "^0.1.0",
+        "@sklv-labs/ts-nestjs-error": "^0.1.0",
+        "@types/express": "^5.0.6",
+        "@types/jest": "^30.0.0",
+        "@types/node": "^25.0.6",
+        "eslint": "^9.39.2",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-import-x": "^4.16.1",
+        "eslint-plugin-prettier": "^5.5.4",
+        "globals": "^17.0.0",
+        "jest": "^30.2.0",
+        "nestjs-cls": "^6.2.0",
+        "prettier": "^3.7.4",
+        "reflect-metadata": "^0.2.2",
+        "rxjs": "^7.8.2",
+        "ts-jest": "^29.4.6",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.52.0"
+    },
+    "engines": {
+        "node": ">=24.0.0"
+    },
+    "dependencies": {
+        "@sklv-labs/ts-core": "^0.1.0",
+        "pino": "^10.1.1",
+        "pino-pretty": "^13.1.3"
+    }
+}
