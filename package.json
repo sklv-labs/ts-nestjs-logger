@@ -1,6 +1,6 @@
 {
     "name": "@sklv-labs/ts-nestjs-logger",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "NestJS structured logging with Pino and CLS integration",
     "author": "sklv-labs",
     "license": "MIT",
